@@ -23,7 +23,8 @@ import { Provider } from 'react-redux';
 import { reducer as formReducer } from 'redux-form';
 import './index.css';
 import App from './App';
-import registerServiceWorker from './registerServiceWorker';
+// import registerServiceWorker from './registerServiceWorker';
+import * as serviceWorker from './serviceWorker';
 const rootReducer = combineReducers({
   form: formReducer,
 });
@@ -34,4 +35,4 @@ ReactDOM.render(
   </Provider>,
   document.getElementById('root')
 );
-registerServiceWorker();
+serviceWorker.register();
